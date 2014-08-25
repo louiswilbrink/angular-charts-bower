@@ -617,7 +617,7 @@ angular.module('angularCharts').directive('acChart', [
             //Add listeners when transition is done
             path.on('mouseover', function (d) {
               makeToolTip({ value: d.tooltip ? d.tooltip : d.data.y[0] }, d3.event);
-              d3.select(this).select('path').transition().duration(200).style('stroke', 'white').style('stroke-width', '2px');
+              d3.select(this).select('path').transition().duration(200).style('stroke', config.stroke).style('stroke-width', config.strokeWidth);
               config.mouseover(d, d3.event);
               scope.$apply();
             }).on('mouseleave', function (d) {
