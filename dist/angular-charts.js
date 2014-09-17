@@ -180,6 +180,9 @@ angular.module('angularCharts').directive('acChart', [
         if (scope.acConfig.strokeWidth) {
           config.strokeWidth = scope.acConfig.strokeWidth;
         }
+        if (scope.acConfig.isAnimate) {
+          config.isAnimate = scope.acConfig.isAnimate;
+        }
       }
       /**
      * Returns appropriate chart function to call
